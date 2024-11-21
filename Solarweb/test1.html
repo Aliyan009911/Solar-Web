@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change and Reverse Images</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <!-- Images to be changed -->
+    <img id="trigger-image" src="smallneptune.png" alt="Image 1" style="width: 100px; height: 100px;" class="image1">
+    <img id="" src="Planet=Sun, size=big.png" alt="Image 2" style="width: 100px; height: 100px;" class="image2">
+    <img id="trigger-reverse" src="smallmercury.png" alt="Image 3" style="width: 100px; height: 100px;" class="image3">
+
+    <script>
+        $(document).ready(function(){
+            let clickCount = 0;
+
+            $("#trigger-image").click(function(){
+                clickCount++; // Increment click count on each click
+
+                if (clickCount === 1) {
+                    // First set of images
+                $(".image1").attr("src", "images/Planet=Uranus, size=small.png");
+                $(".image2").attr("src", "images/Neptune.png");
+                $(".image3").attr("src", "images/Planet=Sun, size=small.png");
+               
+                } else if (clickCount === 2) {
+                    // Second set of images
+                $(".image1").attr("src", "images/smallsaturn.png");
+                $(".image2").attr("src", "images/Uranus.png");
+                $(".image3").attr("src", "images/smallneptune.png");
+               } else if (clickCount === 3) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/smalljupiter.png");
+                    $(".image2").attr("src", "images/Saturn.png");
+                    $(".image3").attr("src", "images/Planet=Uranus, size=small.png");
+
+                } else {
+                    // Reset to the first set after three clicks
+                    clickCount = 0; // Reset count
+                    $(".image1").attr("src", "images/smallneptune.png");
+                    $(".image2").attr("src", "images/Planet=Sun, size=big.png");
+                    $(".image3").attr("src", "images/smallmercury.png");
+                }
+            });
+
+            $("#trigger-reverse").click(function(){
+                if (clickCount > 0) {
+                    clickCount--; // Decrement click count on each reverse click
+
+                    if (clickCount === 8) {
+                        // Reset to original images
+                        $(".image1").attr("src", "images/smallneptune.png");
+                    $(".image2").attr("src", "images/Planet=Sun, size=big.png");
+                    $(".image3").attr("src", "images/smallmercury.png");
+                                   }
+                                    else if (clickCount === 1) {
+                        // Reverse to the first set of images
+                        $(".image1").attr("src", "images/Planet=Uranus, size=small.png");
+                $(".image2").attr("src", "images/Neptune.png");
+                $(".image3").attr("src", "images/Planet=Sun, size=small.png");
+                        
+                    } else if (clickCount === 2) {
+                        // Reverse to the second set of images
+                        $(".image1").attr("src", "images/smalljupiter.png");
+                    $(".image2").attr("src", "images/Saturn.png");
+                    $(".image3").attr("src", "images/Planet=Uranus, size=small.png");
+                                   }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

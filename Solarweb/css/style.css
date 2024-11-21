@@ -1,0 +1,88 @@
+body{
+    background-image: url('../images/Solar.png');
+    background-color: black;
+    background-size: cover; 
+    background-position: center 100px; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 1800px 1000px;
+    position: relative;
+    
+}
+.logo
+{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 4.5rem;
+}
+.bar
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    margin-right: 4.5rem;
+    
+}
+.row2
+{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.bar2
+{
+    color: #BDC5E2;
+    font-size: 1.5rem;
+}
+.bar2-1
+{
+    color: white;
+}
+.marg
+{
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+}
+.image1
+{
+    height: 230px;
+    width: 260px;
+}
+.image2
+{
+    height: 350px;
+    width: 335px;
+}
+.image3
+{
+    height: 230px;
+    width: 260px;
+}
+.absolute-img1
+{
+    position: absolute;
+    top: 290px;
+    left: 0px;
+}
+.absolute-img2
+{
+    position: absolute;
+    top: 280px;
+    left: 505px;
+}
+.absolute-img3
+{
+    position: absolute;
+    top: 290px;
+    right: 0px;
+}
+.tex
+{
+    color: white;
+}
+
+
+
+
+

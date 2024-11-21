@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav d-flex justify-content-center align-items-center marg">
+              <a class="nav-link bar" href="#">Home</a>
+              <a class="nav-link bar" href="#">About</a>
+              <a class="nav-link bar" href="#">Contact</a>
+              <a class="navbar-brand logo" href="#">UNIVERSE</a>
+              <a class="nav-link bar" href="#">Galaxies</a>
+              <a class="nav-link bar" href="#">Blogs</a>
+              <a class="nav-link bar ltr" href="#">العربية</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+<div class="container">
+    <div class="row">
+        <div id="text1" class="col-12 text-center row2">
+            SUN
+        </div>
+    </div>
+<div class="row px-10">
+<div class="col-2 text-center">
+    <div class="bar2">GALAXY</div>
+    <div id="text2" class="bar2-1">Milky Way</div>
+</div>
+<div class="col-2 text-center">
+    <div class="bar2">DIAMETER</div>
+    <div id="text3" class="bar2-1">1,393,684 km</div>
+</div>
+<div class="col-4 text-center">
+    <div class="bar2">LENGTH OF DAY</div>
+    <div id="text4" class="bar2-1">---</div>
+</div>
+<div class="col-4 text-center">
+    <div class="bar2">AVERAGE TEMPURATURE</div>
+    <div id="text5" class="bar2-1">6000 Kelvin</div>
+</div>
+</div>
+
+
+
+
+
+<!-- Sun in Middle -->
+<img src="images/smallneptune.png" alt="Overlay" class="absolute-img1 position-absolute image1" id="trigger-image">
+<img src="images/Planet=Sun, size=big.png" alt="Overlay" class="absolute-img2 position-absolute image2" id="rotate">
+<img src="images/smallmercury.png" alt="Overlay" class="absolute-img3 position-absolute image3" id="trigger-reverse">
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+
+
+
+
+// Sun in the Middle
+ $(document).ready(function(){
+            var angle = 0;
+            $("#trigger-image").click(function(){
+                angle += 70; // Increase the angle by 30 degrees
+                $("#rotate").css('transform', 'rotate(' + angle + 'deg)');
+               
+});
+        });
+        $(document).ready(function(){
+          var angle = 0;
+        $("#trigger-reverse").click(function(){
+                angle -= 70; // Increase the angle by 30 degrees
+                $("#rotate").css('transform', 'rotate(' + angle + 'deg)');
+                
+            });
+        });
+
+        $(document).ready(function(){
+            let clickCount = 0;
+
+            $("#trigger-image").click(function(){
+                clickCount++; // Increment click count on each click
+
+                if (clickCount === 1) {
+                    // First set of images
+                    $(".image1").attr("src", "images/Planet=Uranus, size=small.png");
+                $(".image2").attr("src", "images/Neptune.png");
+                $(".image3").attr("src", "images/Planet=Sun, size=small.png");
+                $("#text1").text('NEPTUNE');
+                $("#text2").text('Milky Way');
+                $("#text3").text('49,528 km');
+                $("#text4").text('16.1 Earth hours');
+                $("#text5").text('-200 C');
+
+                } else if (clickCount === 2) {
+                    // Second set of images
+                $(".image1").attr("src", "images/smallsaturn.png");
+                $(".image2").attr("src", "images/Uranus.png");
+                $(".image3").attr("src", "images/smallneptune.png");
+                $("#text1").text('URANUS');
+                $("#text2").text('Milky Way');
+                $("#text3").text('51,118 km');
+                $("#text4").text('17.2 Earth hours');
+                $("#text5").text('195-degree celcius');
+
+
+                } else if (clickCount === 3) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/smalljupiter.png");
+                    $(".image2").attr("src", "images/Saturn.png");
+                    $(".image3").attr("src", "images/Planet=Uranus, size=small.png");
+                    $("#text1").text('SATURN');
+                $("#text2").text('Milky Way');
+                $("#text3").text('120,536 km');
+                $("#text4").text('10.7 Earth hours');
+                $("#text5").text('140-degree celcius');
+
+                } else if (clickCount === 4) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/smallmars.png");
+                    $(".image2").attr("src", "images/Planet=Jupiter, size=big.png");
+                    $(".image3").attr("src", "images/smallsaturn.png");
+                    $("#text1").text('JUPITER');
+                $("#text2").text('Milky Way');
+                $("#text3").text('142,984 km');
+                $("#text4").text('9.9 Earth hours');
+                $("#text5").text('110-degree celcius');
+
+                } else if (clickCount === 5) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/smallearth.png");
+                    $(".image2").attr("src", "images/Mars.png");
+                    $(".image3").attr("src", "images/smalljupiter.png");
+                    $("#text1").text('MARS');
+                $("#text2").text('Milky Way');
+                $("#text3").text('6,794 km');
+                $("#text4").text('24.7 Earth hours');
+                $("#text5").text('65 degree celcius');
+
+                } else if (clickCount === 6) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/Planet=Venus, size=small.png");
+                    $(".image2").attr("src", "images/Earth.png");
+                    $(".image3").attr("src", "images/smallmars.png");
+                    $("#text1").text('EARTH');
+                $("#text2").text('Milky Way');
+                $("#text3").text('12,756 km');
+                $("#text4").text('24 hour Ground');
+                $("#text5").text('15 C');
+
+                }else if (clickCount === 7) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/smallmercury.png");
+                    $(".image2").attr("src", "images/Planet=Venus, size=big.png");
+                    $(".image3").attr("src", "images/smallearth.png");
+                    $("#text1").text('VENUS');
+                $("#text2").text('Milky Way');
+                $("#text3").text('12,104 km');
+                $("#text4").text('2802 Earth hours');
+                $("#text5").text('464 C');
+
+                }
+                else if (clickCount === 8) {
+                    // Third set of images
+                    $(".image1").attr("src", "images/Planet=Sun, size=small.png");
+                    $(".image2").attr("src", "images/Planet=Mercury, size=big.png");
+                    $(".image3").attr("src", "images/Planet=Venus, size=big.png");
+                    $("#text1").text('MERCURY');
+                $("#text2").text('Milky Way');
+                $("#text3").text('4,878 km');
+                $("#text4").text('4222 Earth hours');
+                $("#text5").text('167 C');
+
+                }else {
+                    // Reset to the first set after three clicks
+                    clickCount = 0; // Reset count
+                    $(".image1").attr("src", "images/smallneptune.png");
+                    $(".image2").attr("src", "images/Planet=Sun, size=big.png");
+                    $(".image3").attr("src", "images/smallmercury.png");
+                    $("#text1").text('SUN');
+                $("#text2").text('Milky Way');
+                $("#text3").text('1392,684 km');
+                $("#text4").text('---');
+                $("#text5").text('6000 Kelvin');
+
+                }
+            });
+        });
+ 
+
+
+    
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
